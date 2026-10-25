@@ -1,0 +1,875 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+  <Section Name="Return">
+    <Member Name="Ret_Val" Datatype="Void" />
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <Name>cieplownia</Name>
+      <Namespace />
+      <Number>4</Number>
+      <ProgrammingLanguage>LAD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="cieplownia_dSTD" />
+        <Component Name="Stan" />
+        <Component Name="bezczynny" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="cieplownia_dSTD" />
+        <Component Name="Stan" />
+        <Component Name="zezwolenie_na_prace" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="cieplownia_dSTD" />
+        <Component Name="Stan" />
+        <Component Name="bezczynny" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="cieplownia_dSTD" />
+        <Component Name="Stan" />
+        <Component Name="gotowy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="cieplownia_dSTD" />
+        <Component Name="Stan" />
+        <Component Name="gotowy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="cieplownia_db_operacja" />
+        <Component Name="Operacja_dziala" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="cieplownia_dSTD" />
+        <Component Name="Stan" />
+        <Component Name="gotowy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="cieplownia_dSTD" />
+        <Component Name="Stan" />
+        <Component Name="pracuje" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="cieplownia_dSTD" />
+        <Component Name="Stan" />
+        <Component Name="pracuje" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="cieplownia_db_operacja" />
+        <Component Name="Operacja_dziala" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="cieplownia_dSTD" />
+        <Component Name="Stan" />
+        <Component Name="pracuje" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="cieplownia_dSTD" />
+        <Component Name="Stan" />
+        <Component Name="zatrzymanie" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="cieplownia_db_bledy" />
+        <Component Name="jakis_blad" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="cieplownia_dSTD" />
+        <Component Name="Stan" />
+        <Component Name="pracuje" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="cieplownia_dSTD" />
+        <Component Name="Stan" />
+        <Component Name="awaria" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="cieplownia_dSTD" />
+        <Component Name="Stan" />
+        <Component Name="zatrzymanie" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="cieplownia_dSTD" />
+        <Component Name="Stan" />
+        <Component Name="zatrzymano_wybiegiem" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="cieplownia_dSTD" />
+        <Component Name="Stan" />
+        <Component Name="zatrzymanie" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="39">
+      <Symbol>
+        <Component Name="cieplownia_dSTD" />
+        <Component Name="Stan" />
+        <Component Name="bezczynny" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="cieplownia_dSTD" />
+        <Component Name="Stan" />
+        <Component Name="awaria" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="41">
+      <Symbol>
+        <Component Name="cieplownia_db_bledy" />
+        <Component Name="kasuj_blad" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="42">
+      <Symbol>
+        <Component Name="cieplownia_dSTD" />
+        <Component Name="Stan" />
+        <Component Name="awaria" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="43">
+      <Symbol>
+        <Component Name="cieplownia_dSTD" />
+        <Component Name="Stan" />
+        <Component Name="bezczynny" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="44" />
+    <Part Name="Contact" UId="45" />
+    <Part Name="RCoil" UId="46" />
+    <Part Name="SCoil" UId="47" />
+    <Part Name="Contact" UId="48" />
+    <Part Name="Contact" UId="49" />
+    <Part Name="RCoil" UId="50" />
+    <Part Name="SCoil" UId="51" />
+    <Part Name="Contact" UId="52" />
+    <Part Name="Contact" UId="53">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="RCoil" UId="54" />
+    <Part Name="SCoil" UId="55" />
+    <Part Name="Contact" UId="56" />
+    <Part Name="RCoil" UId="57" />
+    <Part Name="SCoil" UId="58" />
+    <Part Name="Contact" UId="59" />
+    <Part Name="Contact" UId="60" />
+    <Part Name="RCoil" UId="61" />
+    <Part Name="SCoil" UId="62" />
+    <Part Name="Contact" UId="63" />
+    <Part Name="Contact" UId="64" />
+    <Part Name="RCoil" UId="65" />
+    <Part Name="SCoil" UId="66" />
+  </Parts>
+  <Wires>
+    <Wire UId="67">
+      <Powerrail />
+      <NameCon UId="44" Name="in" />
+      <NameCon UId="48" Name="in" />
+      <NameCon UId="52" Name="in" />
+      <NameCon UId="59" Name="in" />
+      <NameCon UId="63" Name="in" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="21" />
+      <NameCon UId="44" Name="operand" />
+    </Wire>
+    <Wire UId="69">
+      <NameCon UId="44" Name="out" />
+      <NameCon UId="45" Name="in" />
+    </Wire>
+    <Wire UId="70">
+      <IdentCon UId="22" />
+      <NameCon UId="45" Name="operand" />
+    </Wire>
+    <Wire UId="71">
+      <NameCon UId="45" Name="out" />
+      <NameCon UId="46" Name="in" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="23" />
+      <NameCon UId="46" Name="operand" />
+    </Wire>
+    <Wire UId="73">
+      <NameCon UId="46" Name="out" />
+      <NameCon UId="47" Name="in" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="24" />
+      <NameCon UId="47" Name="operand" />
+    </Wire>
+    <Wire UId="75">
+      <IdentCon UId="25" />
+      <NameCon UId="48" Name="operand" />
+    </Wire>
+    <Wire UId="76">
+      <NameCon UId="48" Name="out" />
+      <NameCon UId="49" Name="in" />
+    </Wire>
+    <Wire UId="77">
+      <IdentCon UId="26" />
+      <NameCon UId="49" Name="operand" />
+    </Wire>
+    <Wire UId="78">
+      <NameCon UId="49" Name="out" />
+      <NameCon UId="50" Name="in" />
+    </Wire>
+    <Wire UId="79">
+      <IdentCon UId="27" />
+      <NameCon UId="50" Name="operand" />
+    </Wire>
+    <Wire UId="80">
+      <NameCon UId="50" Name="out" />
+      <NameCon UId="51" Name="in" />
+    </Wire>
+    <Wire UId="81">
+      <IdentCon UId="28" />
+      <NameCon UId="51" Name="operand" />
+    </Wire>
+    <Wire UId="82">
+      <IdentCon UId="29" />
+      <NameCon UId="52" Name="operand" />
+    </Wire>
+    <Wire UId="83">
+      <NameCon UId="52" Name="out" />
+      <NameCon UId="53" Name="in" />
+      <NameCon UId="56" Name="in" />
+    </Wire>
+    <Wire UId="84">
+      <IdentCon UId="30" />
+      <NameCon UId="53" Name="operand" />
+    </Wire>
+    <Wire UId="85">
+      <NameCon UId="53" Name="out" />
+      <NameCon UId="54" Name="in" />
+    </Wire>
+    <Wire UId="86">
+      <IdentCon UId="31" />
+      <NameCon UId="54" Name="operand" />
+    </Wire>
+    <Wire UId="87">
+      <NameCon UId="54" Name="out" />
+      <NameCon UId="55" Name="in" />
+    </Wire>
+    <Wire UId="88">
+      <IdentCon UId="32" />
+      <NameCon UId="55" Name="operand" />
+    </Wire>
+    <Wire UId="89">
+      <IdentCon UId="33" />
+      <NameCon UId="56" Name="operand" />
+    </Wire>
+    <Wire UId="90">
+      <NameCon UId="56" Name="out" />
+      <NameCon UId="57" Name="in" />
+    </Wire>
+    <Wire UId="91">
+      <IdentCon UId="34" />
+      <NameCon UId="57" Name="operand" />
+    </Wire>
+    <Wire UId="92">
+      <NameCon UId="57" Name="out" />
+      <NameCon UId="58" Name="in" />
+    </Wire>
+    <Wire UId="93">
+      <IdentCon UId="35" />
+      <NameCon UId="58" Name="operand" />
+    </Wire>
+    <Wire UId="94">
+      <IdentCon UId="36" />
+      <NameCon UId="59" Name="operand" />
+    </Wire>
+    <Wire UId="95">
+      <NameCon UId="59" Name="out" />
+      <NameCon UId="60" Name="in" />
+    </Wire>
+    <Wire UId="96">
+      <IdentCon UId="37" />
+      <NameCon UId="60" Name="operand" />
+    </Wire>
+    <Wire UId="97">
+      <NameCon UId="60" Name="out" />
+      <NameCon UId="61" Name="in" />
+    </Wire>
+    <Wire UId="98">
+      <IdentCon UId="38" />
+      <NameCon UId="61" Name="operand" />
+    </Wire>
+    <Wire UId="99">
+      <NameCon UId="61" Name="out" />
+      <NameCon UId="62" Name="in" />
+    </Wire>
+    <Wire UId="100">
+      <IdentCon UId="39" />
+      <NameCon UId="62" Name="operand" />
+    </Wire>
+    <Wire UId="101">
+      <IdentCon UId="40" />
+      <NameCon UId="63" Name="operand" />
+    </Wire>
+    <Wire UId="102">
+      <NameCon UId="63" Name="out" />
+      <NameCon UId="64" Name="in" />
+    </Wire>
+    <Wire UId="103">
+      <IdentCon UId="41" />
+      <NameCon UId="64" Name="operand" />
+    </Wire>
+    <Wire UId="104">
+      <NameCon UId="64" Name="out" />
+      <NameCon UId="65" Name="in" />
+    </Wire>
+    <Wire UId="105">
+      <IdentCon UId="42" />
+      <NameCon UId="65" Name="operand" />
+    </Wire>
+    <Wire UId="106">
+      <NameCon UId="65" Name="out" />
+      <NameCon UId="66" Name="in" />
+    </Wire>
+    <Wire UId="107">
+      <IdentCon UId="43" />
+      <NameCon UId="66" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>stan urzadzenia</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="8" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="cieplownia_db_bledy" />
+        <Component Name="jakis_blad" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="cieplownia_dSTD" />
+        <Component Name="Stan" />
+        <Component Name="zezwolenie_na_prace" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="cieplownia_dSTD" />
+        <Component Name="Stan" />
+        <Component Name="zatrzymano_wybiegiem" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="24">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Coil" UId="25" />
+    <Part Name="Coil" UId="26" />
+  </Parts>
+  <Wires>
+    <Wire UId="27">
+      <Powerrail />
+      <NameCon UId="24" Name="in" />
+      <NameCon UId="26" Name="in" />
+    </Wire>
+    <Wire UId="28">
+      <IdentCon UId="21" />
+      <NameCon UId="24" Name="operand" />
+    </Wire>
+    <Wire UId="29">
+      <NameCon UId="24" Name="out" />
+      <NameCon UId="25" Name="in" />
+    </Wire>
+    <Wire UId="30">
+      <IdentCon UId="22" />
+      <NameCon UId="25" Name="operand" />
+    </Wire>
+    <Wire UId="31">
+      <IdentCon UId="23" />
+      <NameCon UId="26" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="9" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>warunki na rozpoczęcie i zatrzymanie pracy</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="B" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>stan urzadzenia v2</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="D" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+  <Access Scope="Call" UId="21">
+    <CallInfo UId="22" BlockType="FC">
+      <Instance Scope="GlobalVariable" UId="24">
+        <Component Name="zawor_bistabilny" UId="23" />
+      </Instance>
+      <Token Text="(" UId="25" />
+      <NamelessParameter UId="26">
+        <Access Scope="GlobalVariable" UId="27">
+          <Symbol UId="28">
+            <Component Name="cieplownia_db_komponenty" UId="29">
+              <BooleanAttribute Name="HasQuotes" UId="30">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="31" />
+            <Component Name="zawor_V1" UId="32" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="33" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="34" />
+  <NewLine Num="2" UId="35" />
+  <Access Scope="Call" UId="36">
+    <CallInfo UId="37" BlockType="FC">
+      <Instance Scope="GlobalVariable" UId="39">
+        <Component Name="czujnik" UId="38" />
+      </Instance>
+      <Token Text="(" UId="40" />
+      <Parameter Name="bit_symulacji" UId="41">
+        <Token Text=":=" UId="42" />
+        <Blank UId="43" />
+        <Access Scope="GlobalVariable" UId="44">
+          <Symbol UId="45">
+            <Component Name="cieplownia_dSTD" UId="46">
+              <BooleanAttribute Name="HasQuotes" UId="47">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="48" />
+            <Component Name="Symulacja" UId="49" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="50" />
+      <NewLine UId="51" />
+      <Blank Num="10" UId="52" />
+      <Parameter Name="czujnik" UId="53">
+        <Token Text=":=" UId="54" />
+        <Access Scope="GlobalVariable" UId="55">
+          <Symbol UId="56">
+            <Component Name="cieplownia_db_komponenty" UId="57">
+              <BooleanAttribute Name="HasQuotes" UId="58">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="59" />
+            <Component Name="czujnik_P1" UId="60" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="61" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="62" />
+  <NewLine Num="2" UId="63" />
+  <Access Scope="Call" UId="64">
+    <CallInfo UId="65" BlockType="FC">
+      <Instance Scope="GlobalVariable" UId="67">
+        <Component Name="czujnik" UId="66" />
+      </Instance>
+      <Token Text="(" UId="68" />
+      <Parameter Name="bit_symulacji" UId="69">
+        <Token Text=":=" UId="70" />
+        <Blank UId="71" />
+        <Access Scope="GlobalVariable" UId="72">
+          <Symbol UId="73">
+            <Component Name="cieplownia_dSTD" UId="74">
+              <BooleanAttribute Name="HasQuotes" UId="75">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="76" />
+            <Component Name="Symulacja" UId="77" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="78" />
+      <NewLine UId="79" />
+      <Blank Num="10" UId="80" />
+      <Parameter Name="czujnik" UId="81">
+        <Token Text=":=" UId="82" />
+        <Access Scope="GlobalVariable" UId="83">
+          <Symbol UId="84">
+            <Component Name="cieplownia_db_komponenty" UId="85">
+              <BooleanAttribute Name="HasQuotes" UId="86">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="87" />
+            <Component Name="czujnik_T1" UId="88" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="89" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="90" />
+  <NewLine Num="2" UId="91" />
+  <Access Scope="Call" UId="92">
+    <CallInfo UId="93" BlockType="FC">
+      <Instance Scope="GlobalVariable" UId="95">
+        <Component Name="zawor_analogowy+pompa" UId="94" />
+      </Instance>
+      <Token Text="(" UId="96" />
+      <NamelessParameter UId="97">
+        <Access Scope="GlobalVariable" UId="98">
+          <Symbol UId="99">
+            <Component Name="cieplownia_db_komponenty" UId="100">
+              <BooleanAttribute Name="HasQuotes" UId="101">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="102" />
+            <Component Name="zawor_an_V2" UId="103" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="104" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="105" />
+  <NewLine Num="2" UId="106" />
+  <Access Scope="Call" UId="107">
+    <CallInfo UId="108" BlockType="FC">
+      <Instance Scope="GlobalVariable" UId="110">
+        <Component Name="zawor_analogowy+pompa" UId="109" />
+      </Instance>
+      <Token Text="(" UId="111" />
+      <NamelessParameter UId="112">
+        <Access Scope="GlobalVariable" UId="113">
+          <Symbol UId="114">
+            <Component Name="cieplownia_db_komponenty" UId="115">
+              <BooleanAttribute Name="HasQuotes" UId="116">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="117" />
+            <Component Name="pompa_P1" UId="118" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="119" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="120" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="10" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="11" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>wywolanie komponentow</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="12" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Call UId="21">
+      <CallInfo Name="cieplownia_warstwa_IO" BlockType="FC" />
+    </Call>
+    <Call UId="22">
+      <CallInfo Name="cieplownia_bledy" BlockType="FC" />
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="23">
+      <Powerrail />
+      <NameCon UId="21" Name="en" />
+    </Wire>
+    <Wire UId="24">
+      <NameCon UId="21" Name="eno" />
+      <NameCon UId="22" Name="en" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="13" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="15" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="16" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>wywolanie warstwy IO i bledow</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="17" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+  <Access Scope="GlobalVariable" UId="21">
+    <Symbol UId="22">
+      <Component Name="cieplownia_db_dane" UId="23">
+        <BooleanAttribute Name="HasQuotes" UId="24">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="25" />
+      <Component Name="zadania_blokow" UId="26" />
+      <Token Text="." UId="27" />
+      <Component Name="blok_1" UId="28" />
+    </Symbol>
+  </Access>
+  <Blank UId="29" />
+  <Token Text=":=" UId="30" />
+  <Blank UId="31" />
+  <Access Scope="GlobalVariable" UId="32">
+    <Symbol UId="33">
+      <Component Name="Clock_1Hz" UId="34">
+        <BooleanAttribute Name="HasQuotes" UId="35">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="36" />
+  <NewLine UId="37" />
+  <Access Scope="GlobalVariable" UId="38">
+    <Symbol UId="39">
+      <Component Name="cieplownia_db_dane" UId="40">
+        <BooleanAttribute Name="HasQuotes" UId="41">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="42" />
+      <Component Name="zadania_blokow" UId="43" />
+      <Token Text="." UId="44" />
+      <Component Name="blok_2" UId="45" />
+    </Symbol>
+  </Access>
+  <Blank UId="46" />
+  <Token Text=":=" UId="47" />
+  <Blank UId="48" />
+  <Access Scope="GlobalVariable" UId="49">
+    <Symbol UId="50">
+      <Component Name="Clock_0.625Hz" UId="51" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="52" />
+  <NewLine UId="53" />
+  <Access Scope="GlobalVariable" UId="54">
+    <Symbol UId="55">
+      <Component Name="cieplownia_db_dane" UId="56">
+        <BooleanAttribute Name="HasQuotes" UId="57">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="58" />
+      <Component Name="zadania_blokow" UId="59" />
+      <Token Text="." UId="60" />
+      <Component Name="blok_3" UId="61" />
+    </Symbol>
+  </Access>
+  <Blank UId="62" />
+  <Token Text=":=" UId="63" />
+  <NewLine UId="64" />
+  <Access Scope="GlobalVariable" UId="65">
+    <Symbol UId="66">
+      <Component Name="cieplownia_db_dane" UId="67">
+        <BooleanAttribute Name="HasQuotes" UId="68">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="69" />
+      <Component Name="zadania_blokow" UId="70" />
+      <Token Text="." UId="71" />
+      <Component Name="blok_4" UId="72" />
+    </Symbol>
+  </Access>
+  <Blank UId="73" />
+  <Token Text=":=" UId="74" />
+  <Blank UId="75" />
+  <Access Scope="GlobalVariable" UId="76">
+    <Symbol UId="77">
+      <Component Name="Clock_0.5Hz" UId="78" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="79" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="18" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="19" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1A" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>wywolania blokow mieszkalnych</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="1C" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Call UId="21">
+      <CallInfo Name="cieplownia_operacja" BlockType="FC" />
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="22">
+      <Powerrail />
+      <NameCon UId="21" Name="en" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1D" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1F" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="20" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>wywolanie operacji</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="21" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="22" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>

@@ -1,0 +1,618 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="grzanie" Datatype="CONT_C" Version="1.1">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="cisnienie" Datatype="CONT_C" Version="1.1">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+  </Section>
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>CE_PID</Name>
+      <Namespace />
+      <Number>2</Number>
+      <ProgrammingLanguage>LAD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+  <Access Scope="GlobalVariable" UId="21">
+    <Symbol UId="22">
+      <Component Name="cieplownia_db_komponenty" UId="23">
+        <BooleanAttribute Name="HasQuotes" UId="24">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="25" />
+      <Component Name="zawor_an_V2" UId="26" />
+      <Token Text="." UId="27" />
+      <Component Name="kontrola" UId="28" />
+      <Token Text="." UId="29" />
+      <Component Name="auto" UId="30" />
+    </Symbol>
+  </Access>
+  <Blank UId="31" />
+  <Token Text=":=" UId="32" />
+  <Blank UId="33" />
+  <Access Scope="LiteralConstant" UId="34">
+    <Constant UId="35">
+      <ConstantValue UId="37">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="38" />
+  <NewLine UId="39" />
+  <Access Scope="GlobalVariable" UId="40">
+    <Symbol UId="41">
+      <Component Name="cieplownia_db_komponenty" UId="42">
+        <BooleanAttribute Name="HasQuotes" UId="43">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="44" />
+      <Component Name="pompa_P1" UId="45" />
+      <Token Text="." UId="46" />
+      <Component Name="kontrola" UId="47" />
+      <Token Text="." UId="48" />
+      <Component Name="auto" UId="49" />
+    </Symbol>
+  </Access>
+  <Blank UId="50" />
+  <Token Text=":=" UId="51" />
+  <Blank UId="52" />
+  <Access Scope="LiteralConstant" UId="53">
+    <Constant UId="54">
+      <ConstantValue UId="56">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="57" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="8" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="cieplownia_db_dane" />
+        <Component Name="PID" />
+        <Component Name="grzanie" />
+        <Component Name="reguluj" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="22">
+      <Constant>
+        <ConstantType>Bool</ConstantType>
+        <ConstantValue>false</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="cieplownia_db_dane" />
+        <Component Name="PID" />
+        <Component Name="grzanie" />
+        <Component Name="nastawa" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="cieplownia_db_komponenty" />
+        <Component Name="czujnik_T1" />
+        <Component Name="wartosc" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="cieplownia_db_komponenty" />
+        <Component Name="zawor_an_V2" />
+        <Component Name="kontrola" />
+        <Component Name="auto" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="26" />
+    <Part Name="CONT_C" Version="1.1" UId="27">
+      <Instance Scope="LocalVariable" UId="28">
+        <Component Name="grzanie" />
+      </Instance>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="60">
+      <Powerrail />
+      <NameCon UId="26" Name="in" />
+    </Wire>
+    <Wire UId="61">
+      <IdentCon UId="21" />
+      <NameCon UId="26" Name="operand" />
+    </Wire>
+    <Wire UId="62">
+      <NameCon UId="26" Name="out" />
+      <NameCon UId="27" Name="en" />
+    </Wire>
+    <Wire UId="63">
+      <OpenCon UId="29" />
+      <NameCon UId="27" Name="COM_RST" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="22" />
+      <NameCon UId="27" Name="MAN_ON" />
+    </Wire>
+    <Wire UId="65">
+      <OpenCon UId="30" />
+      <NameCon UId="27" Name="PVPER_ON" />
+    </Wire>
+    <Wire UId="66">
+      <OpenCon UId="31" />
+      <NameCon UId="27" Name="P_SEL" />
+    </Wire>
+    <Wire UId="67">
+      <OpenCon UId="32" />
+      <NameCon UId="27" Name="I_SEL" />
+    </Wire>
+    <Wire UId="68">
+      <OpenCon UId="33" />
+      <NameCon UId="27" Name="INT_HOLD" />
+    </Wire>
+    <Wire UId="69">
+      <OpenCon UId="34" />
+      <NameCon UId="27" Name="I_ITL_ON" />
+    </Wire>
+    <Wire UId="70">
+      <OpenCon UId="35" />
+      <NameCon UId="27" Name="D_SEL" />
+    </Wire>
+    <Wire UId="71">
+      <OpenCon UId="36" />
+      <NameCon UId="27" Name="CYCLE" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="23" />
+      <NameCon UId="27" Name="SP_INT" />
+    </Wire>
+    <Wire UId="73">
+      <IdentCon UId="24" />
+      <NameCon UId="27" Name="PV_IN" />
+    </Wire>
+    <Wire UId="74">
+      <OpenCon UId="37" />
+      <NameCon UId="27" Name="PV_PER" />
+    </Wire>
+    <Wire UId="75">
+      <OpenCon UId="38" />
+      <NameCon UId="27" Name="MAN" />
+    </Wire>
+    <Wire UId="76">
+      <OpenCon UId="39" />
+      <NameCon UId="27" Name="GAIN" />
+    </Wire>
+    <Wire UId="77">
+      <OpenCon UId="40" />
+      <NameCon UId="27" Name="TI" />
+    </Wire>
+    <Wire UId="78">
+      <OpenCon UId="41" />
+      <NameCon UId="27" Name="TD" />
+    </Wire>
+    <Wire UId="79">
+      <OpenCon UId="42" />
+      <NameCon UId="27" Name="TM_LAG" />
+    </Wire>
+    <Wire UId="80">
+      <OpenCon UId="43" />
+      <NameCon UId="27" Name="DEADB_W" />
+    </Wire>
+    <Wire UId="81">
+      <OpenCon UId="44" />
+      <NameCon UId="27" Name="LMN_HLM" />
+    </Wire>
+    <Wire UId="82">
+      <OpenCon UId="45" />
+      <NameCon UId="27" Name="LMN_LLM" />
+    </Wire>
+    <Wire UId="83">
+      <OpenCon UId="46" />
+      <NameCon UId="27" Name="PV_FAC" />
+    </Wire>
+    <Wire UId="84">
+      <OpenCon UId="47" />
+      <NameCon UId="27" Name="PV_OFF" />
+    </Wire>
+    <Wire UId="85">
+      <OpenCon UId="48" />
+      <NameCon UId="27" Name="LMN_FAC" />
+    </Wire>
+    <Wire UId="86">
+      <OpenCon UId="49" />
+      <NameCon UId="27" Name="LMN_OFF" />
+    </Wire>
+    <Wire UId="87">
+      <OpenCon UId="50" />
+      <NameCon UId="27" Name="I_ITLVAL" />
+    </Wire>
+    <Wire UId="88">
+      <OpenCon UId="51" />
+      <NameCon UId="27" Name="DISV" />
+    </Wire>
+    <Wire UId="89">
+      <NameCon UId="27" Name="LMN" />
+      <IdentCon UId="25" />
+    </Wire>
+    <Wire UId="90">
+      <NameCon UId="27" Name="LMN_PER" />
+      <OpenCon UId="52" />
+    </Wire>
+    <Wire UId="91">
+      <NameCon UId="27" Name="QLMN_HLM" />
+      <OpenCon UId="53" />
+    </Wire>
+    <Wire UId="92">
+      <NameCon UId="27" Name="QLMN_LLM" />
+      <OpenCon UId="54" />
+    </Wire>
+    <Wire UId="93">
+      <NameCon UId="27" Name="LMN_P" />
+      <OpenCon UId="55" />
+    </Wire>
+    <Wire UId="94">
+      <NameCon UId="27" Name="LMN_I" />
+      <OpenCon UId="56" />
+    </Wire>
+    <Wire UId="95">
+      <NameCon UId="27" Name="LMN_D" />
+      <OpenCon UId="57" />
+    </Wire>
+    <Wire UId="96">
+      <NameCon UId="27" Name="PV" />
+      <OpenCon UId="58" />
+    </Wire>
+    <Wire UId="97">
+      <NameCon UId="27" Name="ER" />
+      <OpenCon UId="59" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="9" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="B" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Regulacja temperatury (grzania)</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="D" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="cieplownia_db_dane" />
+        <Component Name="PID" />
+        <Component Name="cisnienie" />
+        <Component Name="reguluj" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="22">
+      <Constant>
+        <ConstantType>Bool</ConstantType>
+        <ConstantValue>false</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="cieplownia_db_dane" />
+        <Component Name="PID" />
+        <Component Name="cisnienie" />
+        <Component Name="nastawa" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="cieplownia_db_komponenty" />
+        <Component Name="czujnik_P1" />
+        <Component Name="wartosc" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="cieplownia_db_komponenty" />
+        <Component Name="pompa_P1" />
+        <Component Name="kontrola" />
+        <Component Name="auto" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="26" />
+    <Part Name="CONT_C" Version="1.1" UId="27">
+      <Instance Scope="LocalVariable" UId="28">
+        <Component Name="cisnienie" />
+      </Instance>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="60">
+      <Powerrail />
+      <NameCon UId="26" Name="in" />
+    </Wire>
+    <Wire UId="61">
+      <IdentCon UId="21" />
+      <NameCon UId="26" Name="operand" />
+    </Wire>
+    <Wire UId="62">
+      <NameCon UId="26" Name="out" />
+      <NameCon UId="27" Name="en" />
+    </Wire>
+    <Wire UId="63">
+      <OpenCon UId="29" />
+      <NameCon UId="27" Name="COM_RST" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="22" />
+      <NameCon UId="27" Name="MAN_ON" />
+    </Wire>
+    <Wire UId="65">
+      <OpenCon UId="30" />
+      <NameCon UId="27" Name="PVPER_ON" />
+    </Wire>
+    <Wire UId="66">
+      <OpenCon UId="31" />
+      <NameCon UId="27" Name="P_SEL" />
+    </Wire>
+    <Wire UId="67">
+      <OpenCon UId="32" />
+      <NameCon UId="27" Name="I_SEL" />
+    </Wire>
+    <Wire UId="68">
+      <OpenCon UId="33" />
+      <NameCon UId="27" Name="INT_HOLD" />
+    </Wire>
+    <Wire UId="69">
+      <OpenCon UId="34" />
+      <NameCon UId="27" Name="I_ITL_ON" />
+    </Wire>
+    <Wire UId="70">
+      <OpenCon UId="35" />
+      <NameCon UId="27" Name="D_SEL" />
+    </Wire>
+    <Wire UId="71">
+      <OpenCon UId="36" />
+      <NameCon UId="27" Name="CYCLE" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="23" />
+      <NameCon UId="27" Name="SP_INT" />
+    </Wire>
+    <Wire UId="73">
+      <IdentCon UId="24" />
+      <NameCon UId="27" Name="PV_IN" />
+    </Wire>
+    <Wire UId="74">
+      <OpenCon UId="37" />
+      <NameCon UId="27" Name="PV_PER" />
+    </Wire>
+    <Wire UId="75">
+      <OpenCon UId="38" />
+      <NameCon UId="27" Name="MAN" />
+    </Wire>
+    <Wire UId="76">
+      <OpenCon UId="39" />
+      <NameCon UId="27" Name="GAIN" />
+    </Wire>
+    <Wire UId="77">
+      <OpenCon UId="40" />
+      <NameCon UId="27" Name="TI" />
+    </Wire>
+    <Wire UId="78">
+      <OpenCon UId="41" />
+      <NameCon UId="27" Name="TD" />
+    </Wire>
+    <Wire UId="79">
+      <OpenCon UId="42" />
+      <NameCon UId="27" Name="TM_LAG" />
+    </Wire>
+    <Wire UId="80">
+      <OpenCon UId="43" />
+      <NameCon UId="27" Name="DEADB_W" />
+    </Wire>
+    <Wire UId="81">
+      <OpenCon UId="44" />
+      <NameCon UId="27" Name="LMN_HLM" />
+    </Wire>
+    <Wire UId="82">
+      <OpenCon UId="45" />
+      <NameCon UId="27" Name="LMN_LLM" />
+    </Wire>
+    <Wire UId="83">
+      <OpenCon UId="46" />
+      <NameCon UId="27" Name="PV_FAC" />
+    </Wire>
+    <Wire UId="84">
+      <OpenCon UId="47" />
+      <NameCon UId="27" Name="PV_OFF" />
+    </Wire>
+    <Wire UId="85">
+      <OpenCon UId="48" />
+      <NameCon UId="27" Name="LMN_FAC" />
+    </Wire>
+    <Wire UId="86">
+      <OpenCon UId="49" />
+      <NameCon UId="27" Name="LMN_OFF" />
+    </Wire>
+    <Wire UId="87">
+      <OpenCon UId="50" />
+      <NameCon UId="27" Name="I_ITLVAL" />
+    </Wire>
+    <Wire UId="88">
+      <OpenCon UId="51" />
+      <NameCon UId="27" Name="DISV" />
+    </Wire>
+    <Wire UId="89">
+      <NameCon UId="27" Name="LMN" />
+      <IdentCon UId="25" />
+    </Wire>
+    <Wire UId="90">
+      <NameCon UId="27" Name="LMN_PER" />
+      <OpenCon UId="52" />
+    </Wire>
+    <Wire UId="91">
+      <NameCon UId="27" Name="QLMN_HLM" />
+      <OpenCon UId="53" />
+    </Wire>
+    <Wire UId="92">
+      <NameCon UId="27" Name="QLMN_LLM" />
+      <OpenCon UId="54" />
+    </Wire>
+    <Wire UId="93">
+      <NameCon UId="27" Name="LMN_P" />
+      <OpenCon UId="55" />
+    </Wire>
+    <Wire UId="94">
+      <NameCon UId="27" Name="LMN_I" />
+      <OpenCon UId="56" />
+    </Wire>
+    <Wire UId="95">
+      <NameCon UId="27" Name="LMN_D" />
+      <OpenCon UId="57" />
+    </Wire>
+    <Wire UId="96">
+      <NameCon UId="27" Name="PV" />
+      <OpenCon UId="58" />
+    </Wire>
+    <Wire UId="97">
+      <NameCon UId="27" Name="ER" />
+      <OpenCon UId="59" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="10" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="11" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Regulacja ciśnienia</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="12" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource />
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="13" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="15" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="16" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="17" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="18" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

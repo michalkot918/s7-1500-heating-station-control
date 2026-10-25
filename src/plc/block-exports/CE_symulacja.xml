@@ -1,0 +1,636 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="temperatura" Datatype="Real" />
+    <Member Name="cisnienie" Datatype="Real" />
+  </Section>
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>CE_symulacja</Name>
+      <Namespace />
+      <Number>3</Number>
+      <ProgrammingLanguage>LAD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+  <LineComment UId="21">
+    <Text UId="22">odbiór ciepła przez bloki</Text>
+  </LineComment>
+  <NewLine UId="23" />
+  <Token Text="IF" UId="24" />
+  <Blank UId="25" />
+  <Access Scope="GlobalVariable" UId="26">
+    <Symbol UId="27">
+      <Component Name="cieplownia_db_dane" UId="28">
+        <BooleanAttribute Name="HasQuotes" UId="29">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="30" />
+      <Component Name="zadania_blokow" UId="31" />
+      <Token Text="." UId="32" />
+      <Component Name="blok_1" UId="33" />
+    </Symbol>
+  </Access>
+  <Blank UId="34" />
+  <Token Text="OR" UId="35" />
+  <Blank UId="36" />
+  <Access Scope="GlobalVariable" UId="37">
+    <Symbol UId="38">
+      <Component Name="cieplownia_db_dane" UId="39">
+        <BooleanAttribute Name="HasQuotes" UId="40">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="41" />
+      <Component Name="zadania_blokow" UId="42" />
+      <Token Text="." UId="43" />
+      <Component Name="blok_2" UId="44" />
+    </Symbol>
+  </Access>
+  <NewLine UId="45" />
+  <Blank Num="4" UId="46" />
+  <Token Text="OR" UId="47" />
+  <Blank UId="48" />
+  <Access Scope="GlobalVariable" UId="49">
+    <Symbol UId="50">
+      <Component Name="cieplownia_db_dane" UId="51">
+        <BooleanAttribute Name="HasQuotes" UId="52">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="53" />
+      <Component Name="zadania_blokow" UId="54" />
+      <Token Text="." UId="55" />
+      <Component Name="blok_3" UId="56" />
+    </Symbol>
+  </Access>
+  <Blank UId="57" />
+  <Token Text="OR" UId="58" />
+  <Blank UId="59" />
+  <Access Scope="GlobalVariable" UId="60">
+    <Symbol UId="61">
+      <Component Name="cieplownia_db_dane" UId="62">
+        <BooleanAttribute Name="HasQuotes" UId="63">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="64" />
+      <Component Name="zadania_blokow" UId="65" />
+      <Token Text="." UId="66" />
+      <Component Name="blok_4" UId="67" />
+    </Symbol>
+  </Access>
+  <NewLine UId="68" />
+  <Token Text="THEN" UId="69" />
+  <NewLine UId="70" />
+  <Blank Num="4" UId="71" />
+  <Access Scope="LocalVariable" UId="72">
+    <Symbol UId="73">
+      <Component Name="temperatura" UId="74" />
+    </Symbol>
+  </Access>
+  <Blank UId="75" />
+  <Token Text=":=" UId="76" />
+  <Blank UId="77" />
+  <Access Scope="LocalVariable" UId="78">
+    <Symbol UId="79">
+      <Component Name="temperatura" UId="80" />
+    </Symbol>
+  </Access>
+  <Blank UId="81" />
+  <Token Text="-" UId="82" />
+  <Blank UId="83" />
+  <Access Scope="LiteralConstant" UId="84">
+    <Constant UId="85">
+      <ConstantValue UId="87">0.01</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="88" />
+  <NewLine UId="89" />
+  <Token Text="END_IF" UId="90" />
+  <Token Text=";" UId="91" />
+  <NewLine Num="3" UId="92" />
+  <LineComment UId="93">
+    <Text UId="94">grzanie pary przez zawór</Text>
+  </LineComment>
+  <NewLine UId="95" />
+  <Token Text="IF" UId="96" />
+  <Blank UId="97" />
+  <Access Scope="GlobalVariable" UId="98">
+    <Symbol UId="99">
+      <Component Name="cieplownia_db_komponenty" UId="100">
+        <BooleanAttribute Name="HasQuotes" UId="101">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="102" />
+      <Component Name="zawor_V1" UId="103" />
+      <Token Text="." UId="104" />
+      <Component Name="IO" UId="105" />
+      <Token Text="." UId="106" />
+      <Component Name="wyjscie" UId="107" />
+    </Symbol>
+  </Access>
+  <NewLine UId="108" />
+  <Token Text="THEN" UId="109" />
+  <NewLine UId="110" />
+  <Blank Num="4" UId="111" />
+  <Access Scope="LocalVariable" UId="112">
+    <Symbol UId="113">
+      <Component Name="temperatura" UId="114" />
+    </Symbol>
+  </Access>
+  <Blank UId="115" />
+  <Token Text=":=" UId="116" />
+  <Blank UId="117" />
+  <Access Scope="LocalVariable" UId="118">
+    <Symbol UId="119">
+      <Component Name="temperatura" UId="120" />
+    </Symbol>
+  </Access>
+  <Blank UId="121" />
+  <Token Text="+" UId="122" />
+  <Blank UId="123" />
+  <Token Text="(" UId="124" />
+  <Access Scope="GlobalVariable" UId="125">
+    <Symbol UId="126">
+      <Component Name="cieplownia_db_komponenty" UId="127">
+        <BooleanAttribute Name="HasQuotes" UId="128">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="129" />
+      <Component Name="zawor_an_V2" UId="130" />
+      <Token Text="." UId="131" />
+      <Component Name="IO" UId="132" />
+      <Token Text="." UId="133" />
+      <Component Name="wyjscie" UId="134" />
+    </Symbol>
+  </Access>
+  <Blank UId="135" />
+  <Token Text="/" UId="136" />
+  <Blank UId="137" />
+  <Access Scope="LiteralConstant" UId="138">
+    <Constant UId="139">
+      <ConstantValue UId="141">1000</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=")" UId="142" />
+  <Token Text=";" UId="143" />
+  <NewLine UId="144" />
+  <Token Text="END_IF" UId="145" />
+  <Token Text=";" UId="146" />
+  <NewLine Num="2" UId="147" />
+  <LineComment UId="148">
+    <Text UId="149">ograniczenia</Text>
+  </LineComment>
+  <NewLine UId="150" />
+  <Token Text="IF" UId="151" />
+  <Blank UId="152" />
+  <Access Scope="LocalVariable" UId="153">
+    <Symbol UId="154">
+      <Component Name="temperatura" UId="155" />
+    </Symbol>
+  </Access>
+  <Blank UId="156" />
+  <Token Text="&lt;" UId="157" />
+  <Blank UId="158" />
+  <Access Scope="LiteralConstant" UId="159">
+    <Constant UId="160">
+      <ConstantValue UId="162">0.0</ConstantValue>
+    </Constant>
+  </Access>
+  <NewLine UId="163" />
+  <Token Text="THEN" UId="164" />
+  <NewLine UId="165" />
+  <Blank Num="4" UId="166" />
+  <Access Scope="LocalVariable" UId="167">
+    <Symbol UId="168">
+      <Component Name="temperatura" UId="169" />
+    </Symbol>
+  </Access>
+  <Blank UId="170" />
+  <Token Text=":=" UId="171" />
+  <Blank UId="172" />
+  <Access Scope="LiteralConstant" UId="173">
+    <Constant UId="174">
+      <ConstantValue UId="176">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="177" />
+  <NewLine UId="178" />
+  <Token Text="END_IF" UId="179" />
+  <Token Text=";" UId="180" />
+  <NewLine Num="2" UId="181" />
+  <Token Text="IF" UId="182" />
+  <Blank UId="183" />
+  <Access Scope="LocalVariable" UId="184">
+    <Symbol UId="185">
+      <Component Name="temperatura" UId="186" />
+    </Symbol>
+  </Access>
+  <Blank UId="187" />
+  <Token Text="&gt;" UId="188" />
+  <Blank UId="189" />
+  <Access Scope="LiteralConstant" UId="190">
+    <Constant UId="191">
+      <ConstantValue UId="193">100.0</ConstantValue>
+    </Constant>
+  </Access>
+  <NewLine UId="194" />
+  <Token Text="THEN" UId="195" />
+  <NewLine UId="196" />
+  <Blank Num="4" UId="197" />
+  <Access Scope="LocalVariable" UId="198">
+    <Symbol UId="199">
+      <Component Name="temperatura" UId="200" />
+    </Symbol>
+  </Access>
+  <Blank UId="201" />
+  <Token Text=":=" UId="202" />
+  <Blank UId="203" />
+  <Access Scope="LiteralConstant" UId="204">
+    <Constant UId="205">
+      <ConstantValue UId="207">100.0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="208" />
+  <NewLine UId="209" />
+  <Token Text="END_IF" UId="210" />
+  <Token Text=";" UId="211" />
+  <NewLine Num="2" UId="212" />
+  <LineComment UId="213">
+    <Text UId="214">przepisać wartość do komponentu</Text>
+  </LineComment>
+  <NewLine Num="2" UId="215" />
+  <Access Scope="GlobalVariable" UId="216">
+    <Symbol UId="217">
+      <Component Name="cieplownia_db_komponenty" UId="218">
+        <BooleanAttribute Name="HasQuotes" UId="219">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="220" />
+      <Component Name="czujnik_T1" UId="221" />
+      <Token Text="." UId="222" />
+      <Component Name="IO" UId="223" />
+      <Token Text="." UId="224" />
+      <Component Name="wejscie_symulowane" UId="225" />
+    </Symbol>
+  </Access>
+  <Blank UId="226" />
+  <Token Text=":=" UId="227" />
+  <Blank UId="228" />
+  <Access Scope="LocalVariable" UId="229">
+    <Symbol UId="230">
+      <Component Name="temperatura" UId="231" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="232" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>TT1 czujnik temperatury</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="8" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+  <LineComment UId="21">
+    <Text UId="22">spadek ciśnienia przez odbiór</Text>
+  </LineComment>
+  <NewLine UId="23" />
+  <Token Text="IF" UId="24" />
+  <Blank UId="25" />
+  <Access Scope="GlobalVariable" UId="26">
+    <Symbol UId="27">
+      <Component Name="cieplownia_db_dane" UId="28">
+        <BooleanAttribute Name="HasQuotes" UId="29">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="30" />
+      <Component Name="zadania_blokow" UId="31" />
+      <Token Text="." UId="32" />
+      <Component Name="blok_1" UId="33" />
+    </Symbol>
+  </Access>
+  <Blank UId="34" />
+  <Token Text="OR" UId="35" />
+  <Blank UId="36" />
+  <Access Scope="GlobalVariable" UId="37">
+    <Symbol UId="38">
+      <Component Name="cieplownia_db_dane" UId="39">
+        <BooleanAttribute Name="HasQuotes" UId="40">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="41" />
+      <Component Name="zadania_blokow" UId="42" />
+      <Token Text="." UId="43" />
+      <Component Name="blok_2" UId="44" />
+    </Symbol>
+  </Access>
+  <NewLine UId="45" />
+  <Blank Num="4" UId="46" />
+  <Token Text="OR" UId="47" />
+  <Blank UId="48" />
+  <Access Scope="GlobalVariable" UId="49">
+    <Symbol UId="50">
+      <Component Name="cieplownia_db_dane" UId="51">
+        <BooleanAttribute Name="HasQuotes" UId="52">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="53" />
+      <Component Name="zadania_blokow" UId="54" />
+      <Token Text="." UId="55" />
+      <Component Name="blok_3" UId="56" />
+    </Symbol>
+  </Access>
+  <Blank UId="57" />
+  <Token Text="OR" UId="58" />
+  <Blank UId="59" />
+  <Access Scope="GlobalVariable" UId="60">
+    <Symbol UId="61">
+      <Component Name="cieplownia_db_dane" UId="62">
+        <BooleanAttribute Name="HasQuotes" UId="63">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="64" />
+      <Component Name="zadania_blokow" UId="65" />
+      <Token Text="." UId="66" />
+      <Component Name="blok_4" UId="67" />
+    </Symbol>
+  </Access>
+  <NewLine UId="68" />
+  <Token Text="THEN" UId="69" />
+  <NewLine UId="70" />
+  <Blank Num="4" UId="71" />
+  <Access Scope="LocalVariable" UId="72">
+    <Symbol UId="73">
+      <Component Name="cisnienie" UId="74" />
+    </Symbol>
+  </Access>
+  <Blank UId="75" />
+  <Token Text=":=" UId="76" />
+  <Blank UId="77" />
+  <Access Scope="LocalVariable" UId="78">
+    <Symbol UId="79">
+      <Component Name="cisnienie" UId="80" />
+    </Symbol>
+  </Access>
+  <Blank UId="81" />
+  <Token Text="-" UId="82" />
+  <Blank UId="83" />
+  <Access Scope="LiteralConstant" UId="84">
+    <Constant UId="85">
+      <ConstantValue UId="87">0.025</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="88" />
+  <NewLine UId="89" />
+  <Token Text="END_IF" UId="90" />
+  <Token Text=";" UId="91" />
+  <NewLine Num="3" UId="92" />
+  <LineComment UId="93">
+    <Text UId="94">dobijanie cisnienia przez pompe</Text>
+  </LineComment>
+  <NewLine UId="95" />
+  <Token Text="IF" UId="96" />
+  <Blank UId="97" />
+  <Access Scope="GlobalVariable" UId="98">
+    <Symbol UId="99">
+      <Component Name="cieplownia_db_komponenty" UId="100">
+        <BooleanAttribute Name="HasQuotes" UId="101">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="102" />
+      <Component Name="pompa_P1" UId="103" />
+      <Token Text="." UId="104" />
+      <Component Name="kontrola" UId="105" />
+      <Token Text="." UId="106" />
+      <Component Name="auto" UId="107" />
+    </Symbol>
+  </Access>
+  <Blank UId="108" />
+  <Token Text="&gt;" UId="109" />
+  <Blank UId="110" />
+  <Access Scope="LiteralConstant" UId="111">
+    <Constant UId="112">
+      <ConstantValue UId="114">0.0</ConstantValue>
+    </Constant>
+  </Access>
+  <NewLine UId="115" />
+  <Token Text="THEN" UId="116" />
+  <NewLine UId="117" />
+  <Blank Num="4" UId="118" />
+  <Access Scope="LocalVariable" UId="119">
+    <Symbol UId="120">
+      <Component Name="cisnienie" UId="121" />
+    </Symbol>
+  </Access>
+  <Blank UId="122" />
+  <Token Text=":=" UId="123" />
+  <Blank UId="124" />
+  <Access Scope="LocalVariable" UId="125">
+    <Symbol UId="126">
+      <Component Name="cisnienie" UId="127" />
+    </Symbol>
+  </Access>
+  <Blank UId="128" />
+  <Token Text="+" UId="129" />
+  <Blank UId="130" />
+  <Token Text="(" UId="131" />
+  <Access Scope="GlobalVariable" UId="132">
+    <Symbol UId="133">
+      <Component Name="cieplownia_db_komponenty" UId="134">
+        <BooleanAttribute Name="HasQuotes" UId="135">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="136" />
+      <Component Name="pompa_P1" UId="137" />
+      <Token Text="." UId="138" />
+      <Component Name="IO" UId="139" />
+      <Token Text="." UId="140" />
+      <Component Name="wyjscie" UId="141" />
+    </Symbol>
+  </Access>
+  <Blank UId="142" />
+  <Token Text="/" UId="143" />
+  <Blank UId="144" />
+  <Access Scope="LiteralConstant" UId="145">
+    <Constant UId="146">
+      <ConstantValue UId="148">1000</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=")" UId="149" />
+  <Token Text=";" UId="150" />
+  <NewLine UId="151" />
+  <Token Text="END_IF" UId="152" />
+  <Token Text=";" UId="153" />
+  <NewLine Num="2" UId="154" />
+  <LineComment UId="155">
+    <Text UId="156">ograniczenia</Text>
+  </LineComment>
+  <NewLine UId="157" />
+  <Token Text="IF" UId="158" />
+  <Blank UId="159" />
+  <Access Scope="LocalVariable" UId="160">
+    <Symbol UId="161">
+      <Component Name="cisnienie" UId="162" />
+    </Symbol>
+  </Access>
+  <Blank UId="163" />
+  <Token Text="&lt;" UId="164" />
+  <Blank UId="165" />
+  <Access Scope="LiteralConstant" UId="166">
+    <Constant UId="167">
+      <ConstantValue UId="169">0.0</ConstantValue>
+    </Constant>
+  </Access>
+  <NewLine UId="170" />
+  <Token Text="THEN" UId="171" />
+  <NewLine UId="172" />
+  <Blank Num="4" UId="173" />
+  <Access Scope="LocalVariable" UId="174">
+    <Symbol UId="175">
+      <Component Name="cisnienie" UId="176" />
+    </Symbol>
+  </Access>
+  <Blank UId="177" />
+  <Token Text=":=" UId="178" />
+  <Blank UId="179" />
+  <Access Scope="LiteralConstant" UId="180">
+    <Constant UId="181">
+      <ConstantValue UId="183">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="184" />
+  <NewLine UId="185" />
+  <Token Text="END_IF" UId="186" />
+  <Token Text=";" UId="187" />
+  <NewLine Num="2" UId="188" />
+  <Token Text="IF" UId="189" />
+  <Blank UId="190" />
+  <Access Scope="LocalVariable" UId="191">
+    <Symbol UId="192">
+      <Component Name="cisnienie" UId="193" />
+    </Symbol>
+  </Access>
+  <Blank UId="194" />
+  <Token Text="&gt;" UId="195" />
+  <Blank UId="196" />
+  <Access Scope="LiteralConstant" UId="197">
+    <Constant UId="198">
+      <ConstantValue UId="200">10.0</ConstantValue>
+    </Constant>
+  </Access>
+  <NewLine UId="201" />
+  <Token Text="THEN" UId="202" />
+  <NewLine UId="203" />
+  <Blank Num="4" UId="204" />
+  <Access Scope="LocalVariable" UId="205">
+    <Symbol UId="206">
+      <Component Name="cisnienie" UId="207" />
+    </Symbol>
+  </Access>
+  <Blank UId="208" />
+  <Token Text=":=" UId="209" />
+  <Blank UId="210" />
+  <Access Scope="LiteralConstant" UId="211">
+    <Constant UId="212">
+      <ConstantValue UId="214">10.0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="215" />
+  <NewLine UId="216" />
+  <Token Text="END_IF" UId="217" />
+  <Token Text=";" UId="218" />
+  <NewLine Num="2" UId="219" />
+  <LineComment UId="220">
+    <Text UId="221">przepisać wartość do komponentu </Text>
+  </LineComment>
+  <NewLine Num="2" UId="222" />
+  <Access Scope="GlobalVariable" UId="223">
+    <Symbol UId="224">
+      <Component Name="cieplownia_db_komponenty" UId="225">
+        <BooleanAttribute Name="HasQuotes" UId="226">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="227" />
+      <Component Name="czujnik_P1" UId="228" />
+      <Token Text="." UId="229" />
+      <Component Name="IO" UId="230" />
+      <Token Text="." UId="231" />
+      <Component Name="wejscie_symulowane" UId="232" />
+    </Symbol>
+  </Access>
+  <Blank UId="233" />
+  <Token Text=":=" UId="234" />
+  <Blank UId="235" />
+  <Access Scope="LocalVariable" UId="236">
+    <Symbol UId="237">
+      <Component Name="cisnienie" UId="238" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="239" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="9" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="B" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>PT1 czujnik ciśnienia</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="D" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="E" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>
