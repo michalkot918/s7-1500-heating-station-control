@@ -1,0 +1,122 @@
+﻿DATA_BLOCK "cieplownia_db_dane"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+NON_RETAIN
+   VAR 
+      zadania_blokow : Struct
+         blok_1 : Bool;
+         blok_2 : Bool;
+         blok_3 : Bool;
+         blok_4 : Bool;
+      END_STRUCT;
+      PID : Struct
+         grzanie : Struct
+            nastawa : Real;
+            reguluj : Bool;
+         END_STRUCT;
+         cisnienie : Struct
+            nastawa : Real;
+            reguluj : Bool;
+         END_STRUCT;
+      END_STRUCT;
+   END_VAR
+
+
+BEGIN
+
+END_DATA_BLOCK
+
+DATA_BLOCK "cieplownia_db_komponenty"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+NON_RETAIN
+   VAR 
+      zawor_V1 { S7_SetPoint := 'False'} : "dt_zawor_bistabilny";
+      zawor_an_V2 : "dt_zaworAnalogo_pompa";
+      pompa_P1 : "dt_zaworAnalogo_pompa";
+      czujnik_P1 : "dt_czujnik";
+      czujnik_T1 : "dt_czujnik";
+   END_VAR
+
+
+BEGIN
+
+END_DATA_BLOCK
+
+DATA_BLOCK "cieplownia_db_operacja"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+NON_RETAIN
+   VAR 
+      Operacja_dziala : Bool;
+      komenda_start : Bool;
+      komenda_stop : Bool;
+      nastaw_cisnienia : Real;
+      nastaw_temperatury : Real;
+   END_VAR
+
+
+BEGIN
+   nastaw_cisnienia := 4.0;
+   nastaw_temperatury := 50.0;
+
+END_DATA_BLOCK
+
+DATA_BLOCK "cieplownia_db_bledy"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+NON_RETAIN
+   VAR 
+      kasuj_blad : Bool;
+      jakis_blad : Bool;
+   END_VAR
+
+
+BEGIN
+
+END_DATA_BLOCK
+
+DATA_BLOCK "cieplownia_dSTD"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+NON_RETAIN
+   VAR 
+      Stan : Struct
+         bezczynny : Bool;
+         gotowy : Bool;
+         pracuje : Bool;
+         zatrzymanie : Bool;
+         awaria : Bool;
+         zezwolenie_na_prace : Bool;
+         zatrzymano_wybiegiem : Bool;
+      END_STRUCT;
+      Symulacja : Bool;
+   END_VAR
+
+
+BEGIN
+   Stan.bezczynny := true;
+   Symulacja := false;
+
+END_DATA_BLOCK
+
+DATA_BLOCK "cieplownia_db_PID"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+NON_RETAIN
+"CE_PID"
+
+BEGIN
+
+END_DATA_BLOCK
+
+DATA_BLOCK "cieplownia_db_symulacja"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+NON_RETAIN
+"CE_symulacja"
+
+BEGIN
+
+END_DATA_BLOCK
+
